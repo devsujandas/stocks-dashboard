@@ -15,7 +15,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
             <div className="mx-auto max-w-6xl px-4 py-3">
               <h1 className="text-pretty text-base md:text-lg font-semibold text-slate-900 dark:text-white">
                 <Link href="/" className="hover:opacity-90 transition" aria-label="Go to Home">
-                  StockPro Analytics
+                  AnlystoX Analytics
                 </Link>
               </h1>
             </div>

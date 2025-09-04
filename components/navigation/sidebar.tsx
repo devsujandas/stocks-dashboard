@@ -19,7 +19,8 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:flex md:w-64 md:flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-black">
       <div className="px-4 py-4 border-b border-slate-200 dark:border-slate-800">
-        <span className="font-bold text-slate-900 dark:text-white">StockPro Analytics</span>
+       <span className="font-bold text-sky-600 dark:text-sky-400">AnlystoX</span>
+
       </div>
       <nav className="flex-1 px-2 py-3">
         <ul className="space-y-1">

@@ -48,42 +48,40 @@ export default function HomePage() {
   const { pathD } = useSparkline(90)
 
   return (
-    <main className="min-h-dvh bg-white text-black dark:bg-black dark:text-white">
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+    <main className="min-h-dvh bg-white text-black dark:bg-black dark:text-white flex flex-col">
+      {/* Hero Section */}
+      <section className="flex-1 mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          {/* Text */}
           <div>
-            <h1 className="text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-              Smarter stock insights, clean and fast.
+            <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl leading-tight">
+              Smarter insights with{" "}
+              <span className="text-sky-600 dark:text-sky-400">AnlystoX</span>
             </h1>
-            <p className="mt-4 text-base text-neutral-700 dark:text-neutral-300 md:text-lg">
-              A premium dashboard for markets, watchlists, portfolios, and news—beautifully designed for speed and
-              clarity.
+            <p className="mt-6 text-base text-neutral-700 dark:text-neutral-300 md:text-lg max-w-xl">
+              A premium dashboard for markets, watchlists, portfolios, and news—
+              beautifully designed for speed, clarity, and decision-making.
             </p>
-            <div className="mt-6 flex gap-3">
+
+            <div className="mt-8 flex gap-3">
               <Link
                 href="/dashboard"
-                className="rounded-md bg-sky-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-400"
+                className="rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-400"
               >
                 Open Dashboard
               </Link>
               <Link
                 href="/news"
-                className="rounded-md border border-black/10 px-4 py-2 text-sm font-medium text-black transition hover:bg-black/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10"
+                className="rounded-lg border border-black/10 px-5 py-2.5 text-sm font-medium text-black transition hover:bg-black/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10"
               >
                 Browse News
               </Link>
             </div>
-            <div className="mt-4 flex gap-4 text-sm">
-              <Link href="/privacy" className="underline decoration-white/20 underline-offset-4 hover:opacity-90">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="underline decoration-white/20 underline-offset-4 hover:opacity-90">
-                Terms & Conditions
-              </Link>
-            </div>
           </div>
-          <div className="rounded-xl border border-black/10 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-black">
-            <div className="relative h-60 w-full overflow-hidden">
+
+          {/* Sparkline Card */}
+          <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-lg dark:border-white/10 dark:bg-zinc-950">
+            <div className="relative h-64 w-full overflow-hidden">
               {pathD ? (
                 <svg viewBox="0 0 320 200" className="h-full w-full">
                   <defs>
@@ -117,9 +115,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
       <footer className="border-t border-black/10 px-4 py-8 text-sm text-neutral-600 dark:border-white/10 dark:text-neutral-300">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} StockPro Analytics. All rights reserved.</div>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+            <span>© {new Date().getFullYear()} AnlystoX. All rights reserved.</span>
+            <Link href="/privacy" className="hover:underline">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:underline">
+              Terms
+            </Link>
+          </div>
           <div>Designed & Developed by Sujan Das</div>
         </div>
       </footer>
