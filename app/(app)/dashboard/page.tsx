@@ -106,8 +106,8 @@ export default function DashboardPage() {
   const indexes = [
     { name: "Sensex", symbol: "SENSEX" },
     { name: "Nifty 50", symbol: "NIFTY" },
-    { name: "NASDAQ", symbol: "^IXIC" },
-    { name: "S&P 500", symbol: "^GSPC" },
+    { name: "NASDAQ", symbol: "IXIC" },
+    { name: "S&P 500", symbol: "GSPC" },
   ]
   // Aggregate index quotes via single hook call
   const { quotes: indexQuoteList, isLoading: indexLoading } = useQuotes(indexes.map((i) => i.symbol))
